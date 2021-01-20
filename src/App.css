@@ -6,7 +6,7 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   font-family: cursive;
-  color: white;
+  color: whitesmoke;
 }
 
 .navbar {
@@ -14,21 +14,35 @@
   align-items: flex-start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body {
+  background-color: whitesmoke;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  margin-top: 80px;
+  width: 40%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.inputa {
+  margin-top: 80px;
+  width: 10%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+.movie {
+  margin-top: 40px;
+  padding: 5px 25px 10px 25px;
+  max-width: 25%;
+  margin-left: 10%;
 }

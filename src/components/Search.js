@@ -7,26 +7,26 @@ const Search = ({ search }) => {
     setSearchValue(e.target.value);
   };
 
-  const resetInputField = () => {
-    setSearchValue("");
-  };
-
   const callSearchFunction = e => {
     e.preventDefault();
     search(searchValue);
     resetInputField();
   };
 
+  const resetInputField = () => {
+    setSearchValue("");
+  };
+
   return (
     <form className="search">
-      <input
+      <input className = 'input'
         value={searchValue}
         onChange={handleSearchInputChanges}
         type="text"
       />
-
-      <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+      <input className = 'inputa' onClick={callSearchFunction} type="submit" value="SEARCH" />
     </form>
+    
   );
 };
 

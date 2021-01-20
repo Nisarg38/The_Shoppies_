@@ -66,9 +66,12 @@ function App() {
   return (
     <div>
       <div classname = 'navbar'>
-        <Topnavbar text="THE SHOPPIES" />
-        <Search search= {search} />
-        <div className="movies">{retrievedMovies}</div>
+          <Topnavbar text="THE SHOPPIES" />
+          <ColoredLine color = '#50B83C' />
+          <div className = 'body'>
+          <Search search= {search} />
+          <div className="movies">{retrievedMovies}</div>
+        </div>
       </div>
     </div>
   );
