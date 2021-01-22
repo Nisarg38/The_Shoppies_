@@ -1,7 +1,7 @@
+
 import './App.css';
+import { Nav, Navbar, Form, FormControl, Button, Image , NavDropdown} from 'react-bootstrap';
 import React, { useReducer, useEffect } from "react";
-import Topnavbar from './components/Topnavbar' ; 
-import ColoredLine from './components/breakline';
 import Search from './components/Search';
 import Movie from './components/Movie';
 import axios from "axios";
@@ -63,17 +63,30 @@ function App() {
       ))
     );
 
+
   return (
-    <div>
-      <div classname = 'navbar'>
-          <Topnavbar text="THE SHOPPIES" />
-          <ColoredLine color = '#50B83C' />
-          <div className = 'body'>
-          <Search search= {search} />
-          <div className="movies">{retrievedMovies}</div>
-        </div>
-      </div>
+    <div style={{ 
+      backgroundImage: `url("https://via.placeholder.com/500")` 
+    }} className="header">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top" Rounded className="logo">
+    <img src="https://media.giphy.com/media/U6eaFPHjUomDS7dkAU/giphy.gif" height="80px" width="80px" />
+  <Navbar.Brand href="#home" className="shoppies">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="https://www.shopify.com/">Shopify</Nav.Link>
+      <Nav.Link href="https://github.com/Nisarg38">GitHub</Nav.Link>
+      <Nav.Link href="https://www.linkedin.com/in/nisarg-patel-1256b816b/">LinkedIn</Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+    <div className="body" style={{ 
+      backgroundImage: `url("")` 
+    }} >
+      <Search search= {search} />
+      <div className="movies">{retrievedMovies}</div>
     </div>
+  </div>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const DEFAULT_PLACEHOLDER_IMAGE =
   "https://christopherscottdesigner.files.wordpress.com/2014/05/this-poster-is-not-available-christopher-scott1.jpg";
 
