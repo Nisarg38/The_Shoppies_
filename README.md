@@ -1,7 +1,7 @@
 # The_Shoppies_
 
 
-Demo : https://github.com/Nisarg38/The_Shoppies_/deployments/activity_log?environment=github-pages
+Demo : https://nisarg38.github.io/The_Shoppies_/
 
 
 The Challenge
