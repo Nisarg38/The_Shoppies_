@@ -26,6 +26,7 @@ const Search = ({ search }) => {
       />
       <input className = 'inputa' onClick={callSearchFunction} type="submit" value="SEARCH" />
     </form>
+
     
   );
 };

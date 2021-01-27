@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Nav, Navbar, Form, FormControl, Button, Image , NavDropdown} from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, Button, Image , NavDropdown, Card, CardDeck} from 'react-bootstrap';
 import React, { useReducer, useEffect } from "react";
 import Search from './components/Search';
 import Movie from './components/Movie';
@@ -70,7 +70,7 @@ function App() {
     }} className="header">
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top" Rounded className="logo">
     <img src="https://media.giphy.com/media/U6eaFPHjUomDS7dkAU/giphy.gif" height="80px" width="80px" />
-  <Navbar.Brand href="#home" className="shoppies">Shoppies</Navbar.Brand>
+  <Navbar.Brand href="#home" className="shoppies">SHOPPIES</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
@@ -83,8 +83,48 @@ function App() {
     <div className="body" style={{ 
       backgroundImage: `url("")` 
     }} >
-      <Search search= {search} />
-      <div className="movies">{retrievedMovies}</div>
+      <Card>
+        <Card.Body className="cardsrch">
+        <Search search= {search} />
+        
+        <CardDeck>
+  <Card>
+    <Card.Body className="movielist">
+      <Card.Title>Movie List</Card.Title>
+      <Card.Header>
+                <Nav variant="tabs" defaultActiveKey="#first">
+                <Nav.Item>
+                <Nav.Link href="#first">Active</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link href="#link">Link</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link href="#disabled" disabled>
+                    Disabled
+                </Nav.Link>
+                </Nav.Item>
+                </Nav>
+                </Card.Header>
+              <Card.Body>
+                <div className="movies">{retrievedMovies}</div>
+              </Card.Body>
+    </Card.Body>
+    
+  </Card>
+  
+  <Card>
+    <Card.Body>
+      <Card.Title>Nominie list </Card.Title>
+     
+    </Card.Body>
+  </Card>
+</CardDeck>
+
+        </Card.Body>
+      </Card>
+     
+      
     </div>
   </div>
   );
