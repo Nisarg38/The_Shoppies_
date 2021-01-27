@@ -88,7 +88,7 @@ function App() {
         <Search search= {search} />
         
         <CardDeck>
-  <Card>
+  <Card >
     <Card.Body className="movielist">
       <Card.Title>Movie List</Card.Title>
       <Card.Header>

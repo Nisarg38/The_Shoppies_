@@ -13,21 +13,23 @@
 }
 
 input {
-  margin-top: 80px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   width: 35%;
   padding: 12px 20px;
   box-sizing: border-box;
 }
 
 .inputa {
-  margin-top: 80px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   width: 10%;
   padding: 12px 20px;
   box-sizing: border-box;
 }
 .movie {
-  margin-top: 40px;
-  padding: 5px 25px 10px 25px;
+  margin-top: 30px;
+  padding: 5px 15px 5px 15px;
   max-width: 25%;
   margin-left: 10%;
 }
