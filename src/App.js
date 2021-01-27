@@ -83,50 +83,54 @@ function App() {
     <div className="body" style={{ 
       backgroundImage: `url("")` 
     }} >
-      <Card>
-        <Card.Body className="cardsrch">
-        <Search search= {search} />
-        
-        <CardDeck>
-  <Card >
-    <Card.Body className="movielist">
-      <Card.Title>Movie List</Card.Title>
-      <Card.Header>
-                <Nav variant="tabs" defaultActiveKey="#first">
-                <Nav.Item>
-                <Nav.Link href="#first">Active</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                <Nav.Link href="#link">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                <Nav.Link href="#disabled" disabled>
-                    Disabled
-                </Nav.Link>
-                </Nav.Item>
-                </Nav>
-                </Card.Header>
-              <Card.Body>
-                <div className="movies">{retrievedMovies}</div>
-              </Card.Body>
-    </Card.Body>
-    
-  </Card>
-  
-  <Card>
-    <Card.Body>
-      <Card.Title>Nominie list </Card.Title>
-     
-    </Card.Body>
-  </Card>
-</CardDeck>
-
-        </Card.Body>
-      </Card>
-     
       
-    </div>
+        
+        <Search search= {search} />
+        <div className="cardsrch">
+        <div class="card" style={{width: '85rem', marginLeft: "5rem"}}>
+  <div class="card-body">
+  <h3>Movie List</h3>
+    <Card.Header>
+              <Nav variant="tabs" defaultActiveKey="#first">
+              <Nav.Item>
+              <Nav.Link href="#first">Active</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+              <Nav.Link href="#link">Link</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+              <Nav.Link href="#disabled" disabled>
+                  Disabled
+              </Nav.Link>
+              </Nav.Item>
+              </Nav>
+      </Card.Header>
+      <Card.Body>
+      <div className="movies">{retrievedMovies}</div>
+      </Card.Body>
   </div>
+  </div>
+
+  <div class="card" style={{width: '28rem', marginLeft: "5rem"}}>
+  <div class="card-body">
+  <h3>Nominie list</h3>
+  </div>
+  </div>
+
+
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+       
+
   );
 }
 
