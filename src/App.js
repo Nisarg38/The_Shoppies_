@@ -70,7 +70,7 @@ function App() {
     }} className="header">
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top" Rounded className="logo">
     <img src="https://media.giphy.com/media/U6eaFPHjUomDS7dkAU/giphy.gif" height="80px" width="80px" />
-  <Navbar.Brand href="#home" className="shoppies">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="#home" className="shoppies">Shoppies</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">

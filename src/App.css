@@ -1,5 +1,5 @@
 .body {
-  background-color: whitesmoke;
+  background-color: white;
   color: black;
 }
 
@@ -36,7 +36,7 @@ input {
   font-size: x-large;
   display: flex;
   flex-direction: column;
-  padding-left: 55%;
+  padding-left: 65%;
   list-style: none;
 }
 .navbar-brand {
