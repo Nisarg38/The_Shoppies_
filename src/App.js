@@ -1,12 +1,12 @@
 
 import './App.css';
-import { Nav, Navbar, Form, FormControl, Button, Image , NavDropdown, Card, CardDeck} from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, Button, Image , NavDropdown, Card, CardColumns} from 'react-bootstrap';
 import React, { useReducer, useEffect } from "react";
 import Search from './components/Search';
 import Movie from './components/Movie';
 import axios from "axios";
 import { initialState, reducer } from "./components/reducer";
-import spinner from "./assests/ajax-loader.gif";
+import spinner from "./assests/loader.gif";
 
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
 
@@ -54,9 +54,11 @@ function App() {
 
   const retrievedMovies =
     loading && !errorMessage ? (
-      <img className="spinner" src={spinner} alt="Loading spinner" />
+      <div className="spinner">
+      <img src={spinner} alt="Loading spinner" />
+      </div>
     ) : errorMessage ? (
-      <div className="errorMessage">{errorMessage}</div>
+      <div className="spinner">{errorMessage}</div>
     ) : (
       movies.map((movie, index) => (
         <Movie key={`${index}-${movie.Title}`} movie={movie} />
@@ -83,25 +85,29 @@ function App() {
     <div className="body" style={{ 
       backgroundImage: `url("")` 
     }} >
+
       
-        
         <Search search= {search} />
         <div className="cardsrch">
-        <div class="card" style={{width: '85rem', marginLeft: "5rem"}}>
+
+<CardColumns>
+        
+        <Card style={{width: '85rem', marginLeft: "5rem"}}>
   <div class="card-body">
-  <h3>Movie List</h3>
+  <h3>Movies</h3>
     <Card.Header>
               <Nav variant="tabs" defaultActiveKey="#first">
               <Nav.Item>
-              <Nav.Link href="#first">Active</Nav.Link>
+              <Nav.Link href="#first">Popular</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-              <Nav.Link href="#link">Link</Nav.Link>
+              <Nav.Link href="#rated">Top Rated</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-              <Nav.Link href="#disabled" disabled>
-                  Disabled
-              </Nav.Link>
+              <Nav.Link href="#Action">Action</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+              <Nav.Link href="#Horror">Horror</Nav.Link>
               </Nav.Item>
               </Nav>
       </Card.Header>
@@ -109,14 +115,17 @@ function App() {
       <div className="movies">{retrievedMovies}</div>
       </Card.Body>
   </div>
-  </div>
+ </Card>
 
-  <div class="card" style={{width: '28rem', marginLeft: "5rem"}}>
+<Card class="card" style={{width: '30rem',marginLeft:"3rem"}}>
+  
   <div class="card-body">
   <h3>Nominie list</h3>
   </div>
-  </div>
+ 
+  </Card>
 
+  </CardColumns>
 
   </div>
   </div>

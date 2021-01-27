@@ -28,10 +28,9 @@ input {
   box-sizing: border-box;
 }
 .movie {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 5px 15px 5px 15px;
-  max-width: 25%;
-  margin-left: 10%;
+  max-width: 20%;
 }
 
 .navbar-nav {
@@ -63,4 +62,12 @@ input {
 .cardsrch {
   display: flex;
   flex-direction: row;
+}
+
+.spinner {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  align-items: center;
+  justify-content: center;
 }
